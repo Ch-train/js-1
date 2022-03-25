@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Необязательное задание.
 
 Необходимо от пользователя получить число.
@@ -25,10 +27,15 @@
 
 Уточнение: пользователь всегда вводит корректное положительное целое число.
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    let userNumber = prompt("Введите число");
+    let n1 = userNumber % 10;
+    let n10 = Math.trunc(userNumber % 100 / 10);
+    let n100 = Math.trunc(userNumber % 1000 / 100);
+    console.log(`В числе ${userNumber} количество сотен: ${n100}, десятков: ${n10}, единиц: ${n1}`);
+  </script>
 </body>
+
 </html>
