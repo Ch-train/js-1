@@ -30,30 +30,24 @@ console.log(`Результат=${mathOperation(a, b, operation)}`);
 
 /**
  * Функция производит выбранную в параметре операцию между двумя числами
- * @param {number} a - 1-е число
- * @param {number} b - 2-е число
- * @returns {number} производит сложение, вычитание, умножение или деление
+ * @param {number} arg1 - 1-е число
+ * @param {number} arg2 - 2-е число
+ * @param {string} operation - производимая операция (+, -, *, /)
+ * @returns {number} результат операции
  */
 function mathOperation(arg1, arg2, operation) {
-  let result;
   switch (operation) {
     case "+":
-      result = add(arg1, arg2);
-      break;
+      return add(arg1, arg2);
     case "-":
-      result = subtract(arg1, arg2);
-      break;
+      return subtract(arg1, arg2);
     case "*":
-      result = multiply(arg1, arg2);
-      break;
+      return multiply(arg1, arg2);
     case "/":
-      result = divide(arg1, arg2);
-      break;
+      return divide(arg1, arg2);
     default:
-      result = NaN;
-      break;
+      return NaN;
   }
-  return result;
 }
 
 /**

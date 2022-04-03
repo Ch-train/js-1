@@ -23,38 +23,26 @@
   <script>
     "use strict";
 
-    let a;
-    let b;
+    const a = +prompt("Введите первое число, отличное от 0");
+    const b = +prompt("Введите второе число, отличное от 0");
 
-    askNumbers(a, b);
     sayResult(calculate(a, b));
 
-    function askNumbers() {
-      a = +prompt("Введите первое число, отличное от 0");
-      b = +prompt("Введите второе число, отличное от 0");
-
-    }
-
     function calculate(a, b) {
-      let result;
-      if (a == 0 || b == 0) {
+      if (a === 0 || b === 0) {
         alert("Введите числа, отличные от 0");
-        result = 0;
+        return 0;
       } else if (a > 0 && b > 0) {
-        result = a - b;
+        return a - b;
       } else if (a < 0 && b < 0) {
-        result = a * b;
+        return a * b;
       } else {
-        result = a + b;
+        return a + b;
       }
-      return result;
     }
 
     function sayResult(result) {
-      if (result != 0) {
-        alert(result);
-
-      }
+      alert(result);
     }
   </script>
 </body>
