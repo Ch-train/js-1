@@ -31,15 +31,14 @@
  */
 function getDigitsOfNumber(userNumber) {
   if (Number.isInteger(userNumber) && userNumber >= 0 && userNumber <= 999) {
-      return {
-        units: userNumber % 10,
-        dozens: Math.trunc(userNumber % 100 / 10),
-        hundreds: Math.trunc(userNumber % 1000 / 100),
-      }
-    } else {
-      console.error("Ошибка. Что-то пошло не так...");
-      return {}
-    }
+    return {
+      units: userNumber % 10,
+      dozens: Math.trunc(userNumber % 100 / 10),
+      hundreds: Math.trunc(userNumber % 1000 / 100),
+    };
   }
+  console.error("Ошибка. Что-то пошло не так...");
+  return {};
+}
 
-  console.log(getDigitsOfNumber(+prompt("Введите целое положительное число от 0 до 999")));
+console.log(getDigitsOfNumber(+prompt("Введите целое положительное число от 0 до 999")));
