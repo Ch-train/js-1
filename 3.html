@@ -118,7 +118,7 @@
      */
     document.querySelector("ul").addEventListener("click", event => {
       const listElement = event.target;
-      if (listElement.tagName == "BUTTON") {
+      if (listElement.tagName === "BUTTON") {
         console.log(`Текст кнопки: "${listElement.textContent}"`);
       }
     });
