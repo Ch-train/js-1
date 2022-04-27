@@ -63,13 +63,14 @@
       H99: "Однако, программирование, в итоге, принесет свои плоды.",
     };
 
-    const classActiveUnique = document.querySelector(".active");
-    let divText = document.querySelector(".text");
+    let classActiveUnique = document.querySelector(".active");
+    const divText = document.querySelector(".text");
     document.querySelector(".nav-tabs").addEventListener("click", event => {
       const element = event.target;
 
       if (element.classList.contains("nav-link")) {
         classActiveUnique.classList.remove("active");
+        classActiveUnique = element;
         event.target.classList.add("active");
         divText.textContent = panelText[event.target.parentElement.dataset.text];
       }
